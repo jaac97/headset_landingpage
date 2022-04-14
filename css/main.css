@@ -1,0 +1,249 @@
+:root {
+    --mainFont: 'Roboto', sans-serif;
+    --secondFont: 'Lato', sans-serif;
+    --primary: #1073ba;
+    --secundary: #00da55;
+    --gray: #3b3b3b;
+    --lightGray: #e1e1e1;
+    --white: #ffffff;
+    --black: #1f1e1e;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*::after,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--mainFont);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 900;
+    font-family: var(--secondFont);
+    margin: 2.5rem 0;
+}
+
+h1 {
+    font-size: 4.4rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+}
+
+h3 {
+    font-size: 2.8rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/* degraded */
+
+.green-degraded {
+    color: transparent;
+    background: linear-gradient(to right, var(--primary) 0%, var(--secundary) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+
+/* header */
+
+.header {
+    background-color: var(--black);
+    padding: 15rem 0;
+    color: var(--white);
+}
+
+@media (min-width: 768px) {
+    .header-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.header-text {
+    text-align: center;
+    padding-top: 5rem;
+}
+
+@media (min-width: 768px) {
+    .header-text {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 0;
+    }
+}
+
+.header-text p {
+    margin: 0;
+}
+
+.tagline-product {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.product-name {
+    font-size: 6rem;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .product-name {
+        font-size: 10rem;
+        line-height: 1;
+    }
+}
+
+.price-product span {
+    font-size: 6rem;
+    font-weight: 900;
+}
+
+
+/* features */
+
+.features-container {
+    background-color: var(--white);
+    padding: 5rem 0;
+}
+
+@media (min-width: 768px) {
+    .features-container {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+.card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.card:last-of-type {
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .card {
+        margin-bottom: 0;
+    }
+}
+
+.card-imagen {
+    width: 5rem;
+}
+
+.card-title {
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+footer {
+    padding-top: 100rem;
+}
+
+
+/* about  */
+
+.about-tech {
+    background-image: linear-gradient(to bottom, transparent 50%, var(--primary) 0), url('../img/imagen-mujer.jpg');
+    background-position: right;
+    background-size: cover;
+    background-repeat: repeat, no-repeat;
+}
+
+@media (min-width: 768px) {
+    .about-tech {
+        background-image: linear-gradient(to right, var(--primary) 50%, transparent 0%), url('../img/imagen-mujer.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: repeat, no-repeat;
+        height: 50rem;
+    }
+}
+
+.about-tech-grid {
+    display: grid;
+    grid-template-rows: repeat(2, 45rem);
+    row-gap: 5rem;
+}
+
+@media (min-width: 412px) {
+    .about-tech-grid {
+        grid-template-rows: repeat(2, 38rem);
+    }
+}
+
+@media (min-width: 768px) {
+    .about-tech-grid {
+        grid-template-rows: none;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: unset;
+        column-gap: 4rem;
+        padding: 2rem 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .about-tech-grid {
+        padding: 10rem 0;
+    }
+}
+
+.about-text {
+    grid-row: 2/3;
+    color: var(--white);
+}
+
+@media (min-width: 768px) {
+    .about-text {
+        grid-row: unset;
+        grid-column: 1/2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
+
+.about-text h2 {
+    font-size: 4rem;
+}
+
+.about-text p {
+    line-height: 2;
+    font-size: 2rem;
+}
