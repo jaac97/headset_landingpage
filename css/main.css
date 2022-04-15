@@ -172,27 +172,42 @@ img {
     text-transform: uppercase;
 }
 
-footer {
-    padding-top: 100rem;
-}
-
 
 /* about  */
 
 .about-tech {
-    background-image: linear-gradient(to bottom, transparent 50%, var(--primary) 0), url('../img/imagen-mujer.jpg');
     background-position: right;
     background-size: cover;
     background-repeat: repeat, no-repeat;
 }
 
+.notavif.notwebp .about-tech {
+    background-image: linear-gradient(to bottom, transparent 50%, var(--primary) 0), url('../img/imagen-mujer.jpg');
+}
+
+.webp .about-tech {
+    background-image: linear-gradient(to bottom, transparent 50%, var(--primary) 0), url('../img/imagen-mujer.webp');
+}
+
+.avif .about-tech {
+    background-image: linear-gradient(to bottom, transparent 50%, var(--primary) 0), url('../img/imagen-mujer.avif');
+}
+
 @media (min-width: 768px) {
     .about-tech {
-        background-image: linear-gradient(to right, var(--primary) 50%, transparent 0%), url('../img/imagen-mujer.jpg');
-        background-position: center;
-        background-size: cover;
+        background-position: right;
+        background-size: 100%, 110rem;
         background-repeat: repeat, no-repeat;
         height: 50rem;
+    }
+    .notavif.notwebp .about-tech {
+        background-image: linear-gradient(to right, var(--primary) 50%, transparent 0%), url('../img/imagen-mujer.jpg');
+    }
+    .webp .about-tech {
+        background-image: linear-gradient(to right, var(--primary) 50%, transparent 0%), url('../img/imagen-mujer.webp');
+    }
+    .avif .about-tech {
+        background-image: linear-gradient(to right, var(--primary) 50%, transparent 0%), url('../img/imagen-mujer.avif');
     }
 }
 
@@ -250,6 +265,10 @@ footer {
 
 
 /* techsPro */
+
+.tech-pro {
+    padding-bottom: 5rem;
+}
 
 @media (min-width: 768px) {
     .tech-pro {
@@ -361,6 +380,12 @@ footer {
     margin: 0;
 }
 
+@media (min-width: 950px) {
+    .model-z h3 {
+        font-size: 4rem;
+    }
+}
+
 .grid-child-content .price {
     font-size: 4rem;
     font-weight: 900;
@@ -370,4 +395,99 @@ footer {
 
 .model-z .price {
     font-size: 6rem;
+}
+
+.newsletter {
+    padding-top: 4rem;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100%, 60rem;
+}
+
+.notavif.notwebp .newsletter {
+    background-image: linear-gradient(to bottom, transparent 50%, var(--white) 50%, var(--white) 100%), url('../img/newsletter.jpg');
+}
+
+.webp .newsletter {
+    background-image: linear-gradient(to bottom, transparent 50%, var(--white) 50%, var(--white) 100%), url('../img/newsletter.webp');
+}
+
+.avif .newsletter {
+    background-image: linear-gradient(to bottom, transparent 50%, var(--white) 50%, var(--white) 100%), url('../img/newsletter.avif');
+}
+
+@media (min-width: 768px) {
+    .newsletter {
+        padding: 10rem 0;
+        background-position: center, -21rem 0rem;
+        background-size: 100%, 100rem;
+        min-height: 50rem;
+    }
+    .notavif.notwebp .newsletter {
+        background-image: linear-gradient(to right, transparent 50%, var(--white) 50%, var(--white) 100%), url('../img/newsletter.jpg');
+    }
+    .webp .newsletter {
+        background-image: linear-gradient(to right, transparent 50%, var(--white) 50%, var(--white) 100%), url('../img/newsletter.webp');
+    }
+    .avif .newsletter {
+        background-image: linear-gradient(to right, transparent 50%, var(--white) 50%, var(--white) 100%), url('../img/newsletter.avif');
+    }
+}
+
+.content-newsletter {
+    display: grid;
+    grid-template-rows: repeat(2, 30rem);
+}
+
+@media (min-width: 768px) {
+    .content-newsletter {
+        grid-template-rows: unset;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 5rem;
+    }
+}
+
+.text-newsletter {
+    grid-row: 2/3;
+}
+
+@media (min-width: 768px) {
+    .text-newsletter {
+        grid-column: 2/3;
+    }
+}
+
+.text-newsletter h3 {
+    font-size: 3.6rem;
+}
+
+.form {
+    grid-row: 3/4;
+}
+
+.input input {
+    width: 100%;
+    padding: 1rem;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    background-color: var(--primary);
+    color: var(--white);
+    font-weight: 900;
+    text-align: center;
+    border: 0;
+    padding: 2rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.footer {
+    padding: 2rem;
+    text-align: center;
+    color: var(--primary);
+    font-family: var(--secondFont);
+    font-size: 2rem;
+    text-transform: uppercase;
 }
